@@ -1,0 +1,144 @@
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:id="@+id/activity_maps"
+    android:background="@drawable/wsu01">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/frameLayout">
+
+        <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+            android:layout_height="217dp" android:id="@+id/map" tools:context=".com.wichita.overwatch.overwatch.MapsActivit"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_gravity="center_horizontal|bottom" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="@string/maptype"
+            android:id="@+id/Btype"
+            android:onClick="changeType"
+            android:layout_gravity="left|top"
+            android:maxWidth="75dp"
+            android:background="#ffffff" />
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="@string/in"
+            android:id="@+id/Bzoomin"
+            android:onClick="onZoom"
+            android:layout_gravity="right|center_vertical"
+            style="?android:attr/buttonStyleSmall"
+            android:background="#ffffff" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="@string/out"
+            android:id="@+id/Bzoomout"
+            android:layout_gravity="right|bottom"
+            android:onClick="onZoom"
+            android:background="#ffffff" />
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="@string/uadLocation"
+            android:id="@+id/uadLocation"
+            android:layout_gravity="left|center_vertical"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_above="@+id/sendLatLng"
+            android:layout_toLeftOf="@+id/startRoute"
+            android:layout_toStartOf="@+id/startRoute"
+            android:background="#ffffff" />
+
+    </FrameLayout>
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="75dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/latlngStrings"
+        android:layout_gravity="bottom"
+        android:inputType="textMultiLine"
+        android:layout_above="@+id/frameLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textColor="#fbf9ff" />
+
+    <Button
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:text="@string/startSmall"
+        android:id="@+id/startRoute"
+        android:layout_gravity="bottom"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_above="@+id/frameLayout"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:background="#ffffff" />
+
+    <Button
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:text="@string/stop"
+        android:id="@+id/stopRoute"
+        android:layout_gravity="bottom"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_above="@+id/startRoute"
+        android:layout_alignRight="@+id/startRoute"
+        android:layout_alignEnd="@+id/startRoute"
+        android:background="#ffffff"
+        android:layout_marginBottom="5dp" />
+
+    <Button
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:text="@string/send"
+        android:id="@+id/sendLatLng"
+        style="?android:attr/buttonStyleSmall"
+        android:background="#ffffff"
+        android:layout_above="@+id/frameLayout"
+        android:layout_toLeftOf="@+id/startRoute"
+        android:layout_toStartOf="@+id/startRoute"
+        android:layout_marginRight="5dp" />
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:id="@+id/TFaddress"
+        android:layout_gravity="center_horizontal|top"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textColor="#fffefb"
+        android:minWidth="150dp" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/search"
+        android:id="@+id/Bsearch"
+        android:onClick="onSearch"
+        android:layout_gravity="right"
+        android:layout_alignBaseline="@+id/TFaddress"
+        android:layout_alignBottom="@+id/TFaddress"
+        android:layout_toRightOf="@+id/TFaddress"
+        android:layout_toEndOf="@+id/TFaddress"
+        android:background="#ffffff" />
+
+</RelativeLayout>
+
+
